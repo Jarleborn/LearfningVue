@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+  </div>
+
+  <div id="app-2">
+    <span v-bind:title="message">
+      Hover your mouse over me for a few seconds
+      to see my dynamically bound title!
+    </span>
+  </div>
+
+  <div id="app-3">
+    <p v-if='seen'> Now You See Me </p>
+  </div>
+
+  <div class="app-4">
+    <ol>
+      <li v-for='todo in todos'>
+        {{ todo.text}}
+      </li>
+    </ol>
+  </div>
+
+  <div class="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click='reverseMessage'> Rev rev </button>
+  </div>
+
+  <div class="app-52">
+  {{ message.split('').reverse().join('') }}
+</div>
+
+  <div class="app-6">
+    <p>{{ message }}</p>
+    <input v-model='message' >
+  </div>
+<button v-on:click='func' id='but' v-bind:disabled="someDynamicCondition">Button</button>
+  <div class="app-7">
+    <ol>
+      <todo-item v-for="item in list" v-bind:todo='item'></todo-item>
+    </ol>
+  </div>
+<div class="aTest">
+  <a class='aTag' v-bind:href="url" target="_blank">v-bind</a>
+  <br />
+  <a class='aTag' :href="url" target="_blank">:</a>
+</div>
+
+<p id="testP"> hej: '{{ reverse() }}'</p>
+
+<div id="example">
+  <p>Original message: "{{ message }}"</p>
+  <p>Computed reversed message: "{{ reversedMessage }}"</p>
+</div>
+
+
+<div class="static" v-bind:class= "[isActive ? activeClass : '', errorClass]">
+  Funakr detta
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="component.js"></script>
+</body>
+</html>
