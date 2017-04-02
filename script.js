@@ -140,3 +140,10 @@ const cliker = new Vue({
     counter: 0
   }
 })
+
+const bForm = new Vue({
+  el: '.basicForm',
+  data:{
+    message: '',
+  }
+})

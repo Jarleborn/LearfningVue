@@ -41,7 +41,7 @@
 </div>
 <hr />
   <div class="app-6">
-    <p>{{ message }}</p>
+    <p>{{ message.split('').reverse().join('') }}</p>
     <input v-model='message' >
   </div>
 <button v-on:click='func' id='but' v-bind:disabled="someDynamicCondition">Button</button>
@@ -107,6 +107,13 @@
 </div>
 <hr>
 <input v-on:keyup.up="submit">
+<hr>
+<div class="basicForm">
+  <input v-model="message" placeholder="edit me">
+  <p>Message is: {{ message }}</p>
+</div>
+
+<hr>
 
 <script src="https://unpkg.com/vue"></script>
 <script type="text/javascript" src="script.js"></script>
