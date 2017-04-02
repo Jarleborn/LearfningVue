@@ -92,3 +92,51 @@ const stText = new Vue({
     errorClass: 'text-danger',
   }
 })
+
+const bjs = new Vue({
+  el: '.ifBajs',
+  data: {
+    nödig: false
+  }
+})
+
+const listTest = new Vue({
+  el: '#listTest',
+  data:{
+    items: [
+    {message: 'Numel'},
+    {message: 'Gulpin'},
+    {message: 'Tailow'},
+    {message: 'Beware'},
+    {message: 'Munchlax'},
+    {message: 'Snorlax'},
+    {message: 'Onyx'},
+    {message: 'Oranguru'},
+    {message: 'Rowlet'},
+  ]}
+})
+
+const listTest2 = new Vue({
+  el: '#listTest2',
+  data:{
+    parentMessage: 'Pokemon Named:',
+    items: [
+    {message: 'Numel'},
+    {message: 'Gulpin'},
+    {message: 'Tailow'},
+    {message: 'Beware'},
+    {message: 'Munchlax'},
+    {message: 'Snorlax'},
+    {message: 'Onyx'},
+    {message: 'Oranguru'},
+    {message: 'Rowlet'},
+  ]}
+})
+
+
+const cliker = new Vue({
+  el: '.clicker',
+  data:{
+    counter: 0
+  }
+})

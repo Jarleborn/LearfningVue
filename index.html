@@ -11,18 +11,18 @@
   <div id="app">
     {{ message }}
   </div>
-
+<hr />
   <div id="app-2">
     <span v-bind:title="message">
       Hover your mouse over me for a few seconds
       to see my dynamically bound title!
     </span>
   </div>
-
+<hr />
   <div id="app-3">
     <p v-if='seen'> Now You See Me </p>
   </div>
-
+<hr />
   <div class="app-4">
     <ol>
       <li v-for='todo in todos'>
@@ -30,43 +30,84 @@
       </li>
     </ol>
   </div>
-
+<hr />
   <div class="app-5">
     <p>{{ message }}</p>
     <button v-on:click='reverseMessage'> Rev rev </button>
   </div>
-
+<hr />
   <div class="app-52">
   {{ message.split('').reverse().join('') }}
 </div>
-
+<hr />
   <div class="app-6">
     <p>{{ message }}</p>
     <input v-model='message' >
   </div>
 <button v-on:click='func' id='but' v-bind:disabled="someDynamicCondition">Button</button>
-  <div class="app-7">
+  <!-- <div class="app-7">
     <ol>
       <todo-item v-for="item in list" v-bind:todo='item'></todo-item>
     </ol>
-  </div>
+  </div> -->
+  <hr />
 <div class="aTest">
   <a class='aTag' v-bind:href="url" target="_blank">v-bind</a>
   <br />
   <a class='aTag' :href="url" target="_blank">:</a>
 </div>
-
+<hr />
 <p id="testP"> hej: '{{ reverse() }}'</p>
-
+<hr />
 <div id="example">
   <p>Original message: "{{ message }}"</p>
   <p>Computed reversed message: "{{ reversedMessage }}"</p>
 </div>
 
-
+<hr />
 <div class="static" v-bind:class= "[isActive ? activeClass : '', errorClass]">
   Funakr detta
 </div>
+
+<hr />
+<div class='ifBajs'>
+  <template  v-if='nödig'>
+    <h1>Massa</h1>
+    <h1>Massa</h1>
+    <h1>Saker</h1>
+    <h1>har</h1>
+    <h1>vi</h1>
+    <h1>här</h1>
+  </template>
+<hr />
+  <div v-if="Math.random() > 0.5">
+    Now you see me
+  </div>
+  <div v-else>
+    Now you don't
+  </div>
+</div>
+<hr />
+<ul id="listTest">
+  <li v-for='item in items'>
+    {{item.message}}
+  </li>
+</ul>
+
+<hr />
+<ul id="listTest2">
+  <li v-for='(item, index) in items'>
+    {{parentMessage}}: {{index}}  - {{item.message}}
+  </li>
+</ul>
+<hr>
+<div class="clicker">
+  <button type="button" name="button" v-on:click='counter += 1'>Älska</button>
+  <p> Du har älskat detta {{counter}} gånger <3 </p>
+</div>
+<hr>
+<input v-on:keyup.up="submit">
+
 <script src="https://unpkg.com/vue"></script>
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="component.js"></script>
